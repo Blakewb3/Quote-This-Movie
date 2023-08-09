@@ -1,3 +1,34 @@
-body {
-    background-color: aqua;
+body{
+    background-color: darkgrey;
+    text-align: center;
+}
+#poster{
+    text-align: center;
+
+    margin-top: 30px;
+}
+#poster h2{
+    background-image: radial-gradient( rgb(255, 101, 101)60%, rgb(91, 0, 0));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 300px; 
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, rgb(164, 98, 6), rgb(247, 178, 3)30% ,yellow ,rgb(247, 178, 3), rgb(164, 98, 6));
+    padding: 5px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom right,rgb(164, 98, 6), yellow 20%,rgb(247, 178, 3) 50%, rgb(164, 98, 6)70%);
+    background-clip: padding-box;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(yellow, rgb(164, 98, 6), rgb(247, 178, 3) 50% ,yellow ,rgb(247, 178, 3), rgb(164, 98, 6)90%, yellow );
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
