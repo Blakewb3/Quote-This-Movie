@@ -15,3 +15,15 @@ fetch(url, options)
 .then(function(data) {
     console.log(data)
 })
+
+const posterurl = 'http://www.omdbapi.com/?t=' + search.value + '&apikey=b084d09a'
+
+
+fetch(posterurl)
+.then(function(res) {
+    console.log(res.status)
+    return res.json();
+})
+.then(function(data) {
+    console.log(data)
+})
