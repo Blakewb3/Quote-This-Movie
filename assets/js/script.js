@@ -1,9 +1,9 @@
-const url = 'https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/actor/al_pachino';
+const url = 'https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes';
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '777c9617ccmshf8277229fbc7775p143a73jsn252dbe9c9665',
-		'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
+		'X-RapidAPI-Key': 'a6814aeb8fmsh277ac29f029a284p12139djsnfda8f4f8b5d5',
+		'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com',
 	}
 };
 
