@@ -1,21 +1,29 @@
-// const url = 'https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/actor/uma_thurman';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '777c9617ccmshf8277229fbc7775p143a73jsn252dbe9c9665',
-// 		'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
-// 	}
-// };
+const url = ('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/from/the_godfather');
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a6814aeb8fmsh277ac29f029a284p12139djsnfda8f4f8b5d5',
+		'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com',
+	}
+};
 
-// fetch(url, options)
-// .then(function(res) {
-//     console.log(res.status)
-//     return res.json();
-// })
-// .then(function(data) {
-//     console.log(data)
-// })
+fetch(url, options)
+.then(function(res) {
+    console.log(res.status)
+    return res.json();
+})
+.then(function(data) {
+    console.log(data)
+})
 
-var search = document.getElementById("search");
+var search = document.getElementById("search")
 var go = document.getElementById("go");
-go.addEventListener("click", );
+go.addEventListener("click", makeSearch);
+
+function makeSearch(event) {
+	event.preventDefault;
+	console.log(search.value);
+	console.log("hi");
+	const url = 
+	
+}
