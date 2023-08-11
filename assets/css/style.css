@@ -2,6 +2,11 @@ body{
     background-color: darkgrey;
     text-align: center;
 }
+
+header{
+   
+font-family: 'Source Code Pro', monospace;
+}
 #poster{
     text-align: center;
 
