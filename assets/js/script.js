@@ -1,5 +1,5 @@
 var search = document.getElementById("search")
-search.addEventListener("enter", makeSearch)
+search.addEventListener("return", makeSearch)
 var go = document.getElementById("go");
 go.addEventListener("click", makeSearch);
 var p = document.getElementsByTagName('p');
@@ -23,7 +23,7 @@ function makeSearch(event) {
     var img = document.getElementById("img");
     var h2 = document.getElementById("h2");
     var quote = document.getElementById("quote");
-    // var quotes = document.getElementById("quotes")
+
     fetch(url, options).then(function (res) {
         return res.json();
     }).then(function (data) {
@@ -34,13 +34,11 @@ function makeSearch(event) {
             p.textContent = "no quote for this movie"
 		} else {
             for (let i = 0; i < data.length; i++) {
-                // quotes.textContent = element.quote + "  ~" + element.character
                 const element = data[i];
                 var p = document.createElement("p");
                 quote.appendChild(p);
                 p.textContent = element.quote + "  ~" + element.character;
             }
-
         }
     })
 
