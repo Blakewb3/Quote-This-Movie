@@ -1,17 +1,29 @@
 var search = document.getElementById("search")
-search.addEventListener("return", makeSearch)
+search.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      makeSearch()}});
 var go = document.getElementById("go");
 go.addEventListener("click", makeSearch);
 var p = document.getElementsByTagName('p');
+console.dir(go)
+var count = 0;
 
 function makeSearch(event) {
-	console.log(p);
+    count ++;
+    localStorage.setItem(count, search.value);
+    console.log(localStorage.length);
+    var quoteNumber = localStorage.length;
+    var footer = document.getElementById("footer");
+    footer.textContent = (quoteNumber + " movies quoted");
+    // var history = localStorage.getItem("history");
+    // history = ;
 	for (let i = 0; i < p.length; i++) {
 		const element = p[i];
 		element.textContent = ''
 		
 	}
-    const url = ('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/from/' + search.value);
+    var quoteSearch = search.value.replace(/ /g, "_")
+    const url = ('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/from/' + quoteSearch);
     const options = {
         method: 'GET',
         headers: {
@@ -42,7 +54,7 @@ function makeSearch(event) {
         }
     })
 
-    event.preventDefault;
+    // event.preventDefault;
     console.log(search.value);
     const posterurl = 'http://www.omdbapi.com/?t=' + search.value + '&apikey=b084d09a'
 
