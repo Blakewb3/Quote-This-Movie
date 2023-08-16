@@ -7,9 +7,31 @@ Header{
    /* background-color: rgba(240, 248, 255, 0.418); */
  font-family: 'Source Code Pro', monospace;
 }
- 
+#header2 {
+display: flex;
+}
+
+#search{
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 60%;
+    border-radius: 10px;
+    padding-right: 90px;
+    padding-left: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+#go{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+::placeholder{
+    font-size: larger;
+    text-align: left;
+}
 #titleImg{
-    width: 700px;
+    width: 200px;
     
 }
 
@@ -18,18 +40,6 @@ Header{
     
 } */
 
-#search{
-   
-    border-radius: 10px;
-    padding-right: 90px;
-    padding-left: 10px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-}
-::placeholder{
-    font-size: larger;
-    text-align: left;
-}
 
 #exQuote{
     margin-left: 35%;
@@ -73,7 +83,7 @@ Header{
     display: flex;
     width: 50%;
 }
-
+ 
 #img{
   
     margin-left: 50px;
@@ -88,7 +98,6 @@ Header{
 }
 
 #quote p{
-   
     background-color: rgba(255, 255, 255, 0.318);
     padding: 5px;
     border-radius: 10px;
@@ -96,7 +105,7 @@ Header{
 }
 
 #moviename{
-   margin-left: 50px;
+     margin-left: 50px;
     background-image: radial-gradient( rgb(255, 101, 101)60%, rgb(91, 0, 0));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 300px; 
@@ -106,10 +115,8 @@ Header{
     padding: 5px;
     margin-bottom: 0;
     margin-top: 30px;
-
 }
 
 .hide{
     display: none;
 }
-
