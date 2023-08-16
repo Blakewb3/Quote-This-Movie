@@ -1,4 +1,4 @@
-# Movie Quote App
+# Quote This! Movie
 
 <img src="./assets/images/untitled_artwork.png" alt="quote this! movie" width="380px"/>
 
@@ -7,8 +7,10 @@ This web appliction ables the user to search for any movie and get multiple popu
 
 ## Table of Contents
 * [Description](#Description) 
+* [Deployed link](#deployed-link)
 * [How to use](#How-to-use) 
-* [Credits](#Credits)
+* [API's used](#API's-used)
+* [Contributors](#Contributors)
 * [License](#License) 
 
 ## How to use
