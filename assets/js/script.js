@@ -3,18 +3,22 @@ search.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       makeSearch()}});
 var go = document.getElementById("go");
-go.addEventListener("click", makeSearch);
+go.addEventListener("click", save);
 var p = document.getElementsByTagName('p');
 console.dir(go)
-var count = 0;
-
+function save() {
+    localStorage.setItem("search value" , search.value);
+    window.location.href = "index2.html";
+ makeSearch()
+}
+var searchLocal = localStorage.getItem("search value");
 function makeSearch(event) {
-    count ++;
-    localStorage.setItem(count, search.value);
-    console.log(localStorage.length);
-    var quoteNumber = localStorage.length;
-    var footer = document.getElementById("footer");
-    footer.textContent = (quoteNumber + " movies quoted");
+    
+    console.log(search.value); 
+    console.log(searchLocal);
+    // var quoteNumber = localStorage.length;
+    // var footer = document.getElementById("footer");
+    // footer.textContent = (quoteNumber + " movies quoted");
     // var history = localStorage.getItem("history");
     // history = ;
 	for (let i = 0; i < p.length; i++) {
@@ -22,7 +26,7 @@ function makeSearch(event) {
 		element.textContent = ''
 		
 	}
-    var quoteSearch = search.value.replace(/ /g, "_")
+    var quoteSearch = searchLocal.replace(/ /g, "_")
     const url = ('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/from/' + quoteSearch);
     const options = {
         method: 'GET',
@@ -55,7 +59,7 @@ function makeSearch(event) {
     })
 
     // event.preventDefault;
-    console.log(search.value);
+   
     const posterurl = 'http://www.omdbapi.com/?t=' + search.value + '&apikey=b084d09a'
 
 
