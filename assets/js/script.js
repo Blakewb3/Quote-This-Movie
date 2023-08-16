@@ -3,30 +3,34 @@ search.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       makeSearch()}});
 var go = document.getElementById("go");
-go.addEventListener("click", save);
+go.addEventListener("click", makeSearch);
 var p = document.getElementsByTagName('p');
-console.dir(go)
-function save() {
-    localStorage.setItem("search value" , search.value);
-    window.location.href = "index2.html";
- makeSearch()
-}
-var searchLocal = localStorage.getItem("search value");
+var style = document.getElementById('style');
+var header = document.getElementById('header');
+var results = document.getElementById('results');
+var count = 0;
+
 function makeSearch(event) {
+    count ++;
+    var quoteSearch = search.value.replace(/ /g, "_")
+    if (count === 1) {
+        console.log(style.outerHTML);
+        console.log("hi");
+        style.outerHTML = ('<link id="style" rel="stylesheet" href="./assets/css/style2.css">');
+        header.classList.add("header2");
+        results.classList.remove('hide');
+    }
     
-    console.log(search.value); 
-    console.log(searchLocal);
-    // var quoteNumber = localStorage.length;
-    // var footer = document.getElementById("footer");
-    // footer.textContent = (quoteNumber + " movies quoted");
-    // var history = localStorage.getItem("history");
-    // history = ;
+    localStorage.setItem(count , search.value);
+
+    var quoteNumber = localStorage.length;
+    var footer = document.getElementById("footer");
+    footer.textContent = (quoteNumber + " movies quoted");
 	for (let i = 0; i < p.length; i++) {
 		const element = p[i];
 		element.textContent = ''
 		
 	}
-    var quoteSearch = searchLocal.replace(/ /g, "_")
     const url = ('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/from/' + quoteSearch);
     const options = {
         method: 'GET',
@@ -57,8 +61,6 @@ function makeSearch(event) {
             }
         }
     })
-
-    // event.preventDefault;
    
     const posterurl = 'http://www.omdbapi.com/?t=' + search.value + '&apikey=b084d09a'
 
@@ -71,6 +73,4 @@ function makeSearch(event) {
         h2.textContent = data.Title
 
     })
-
-
 }
